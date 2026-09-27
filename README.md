@@ -22,7 +22,7 @@
 
 ### 二、撰寫內容
 
-平常只需要編輯一個檔案：`markdown/thesis.md`。章節編號、圖表編號、參考文獻的排序都由程式自動處理，中途插入一個小節也不會影響後面的編號。
+平常只需要編輯（你或者是 AI）一個檔案：`markdown/thesis.md`。章節編號、圖表編號、參考文獻的排序都由程式自動處理，中途插入一個小節也不會影響後面的編號。
 
 動筆之前，建議先把文獻 PDF 放進 `literature/` 資料夾，檔名使用該文獻的引用代號：
 
@@ -62,16 +62,18 @@ cp -R thesis-writing-skills/skills/thesis-writing ~/.claude/skills/
 
 如果你使用的是 Cursor、ChatGPT 或其他 AI 工具也沒問題。這個 skill 本身就是一組說明文件，把 `skills/thesis-writing/SKILL.md` 的內容提供給 AI 閱讀即可。
 
-另外需要以下工具：
+另外需要以下工具。不用自己先裝，第一次使用時 AI 會逐項檢查，缺什麼再帶你安裝：
 
 | 工具 | 用途 | 安裝方式 |
 | --- | --- | --- |
-| XeLaTeX + BibTeX | 產生 PDF | macOS 安裝 [MacTeX](https://tug.org/mactex/)；Linux 執行 `apt install texlive-full` |
-| Python 3.9 以上 | Markdown 轉 LaTeX | 系統通常已內建 |
-| make | 建置流程 | macOS 安裝 Xcode Command Line Tools |
+| Command Line Tools | 提供 make 與 Python | `xcode-select --install` |
+| Homebrew | 安裝下面的工具 | 見 [brew.sh](https://brew.sh) |
+| TeX Live | 產生 PDF | `brew install texlive` |
 | Pandoc | 從 Word 匯入（選用） | `brew install pandoc` |
 
-MacTeX 的檔案約 5GB，建議先開始下載，再繼續閱讀後面的說明。
+TeX Live 裝完約 4.7GB，下載需要 20 到 30 分鐘，請預留至少 10GB 的磁碟空間。
+
+目前只在 macOS 上驗證過。Windows 使用者可以請 AI 參考這張清單，協助找出對應的安裝方式。
 
 ---
 

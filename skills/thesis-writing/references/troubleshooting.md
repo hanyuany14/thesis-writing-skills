@@ -6,15 +6,14 @@
 
 ### `make: xelatex: command not found`
 
-沒裝 TeX 發行版，或裝了但不在 PATH。
+沒裝 TeX，或裝了但不在 PATH。
 
-- macOS：安裝 [MacTeX](https://tug.org/mactex/)（完整版約 5GB）。裝完**重開終端機**，或執行 `eval "$(/usr/libexec/path_helper)"`。精簡的 BasicTeX 需要另外用 `tlmgr` 補套件，不建議。
-- Linux：`sudo apt install texlive-full`（Debian／Ubuntu）。
-- 已裝但找不到：檢查 `/Library/TeX/texbin` 是否在 PATH 裡（macOS）。
+- 沒裝：執行 `brew install texlive`（完整步驟見 SKILL.md 的「⓪ 環境準備」）。
+- 已裝但找不到：確認 `/opt/homebrew/bin` 在 PATH 裡。剛裝好 Homebrew 的話，照安裝結束時畫面上的 Next steps 設定，再開新的終端機。
 
 ### `! LaTeX Error: File 'xxx.sty' not found`
 
-缺套件。TeX Live／MacTeX 完整版通常都有；精簡版用 `sudo tlmgr install xxx` 補。
+缺套件。`brew install texlive` 是完整版，不會缺；會出現這個錯誤，通常是之前裝過 BasicTeX 等精簡版，而且它排在 PATH 前面。用 `which xelatex` 確認實際執行的是 `/opt/homebrew/bin/xelatex`。
 
 模板用到的非標準套件：`xeCJK`、`setspace`、`titlesec`、`titletoc`、`tocloft`、`tocbibind`、`etoolbox`、`algorithm`、`algpseudocode`、`caption`、`biblatex`、`wallpaper`、`pdfpages`、`tabularx`、`adjustbox`、`booktabs`、`enumitem`、`mathtools`。
 
@@ -23,7 +22,7 @@
 系統沒有該字型。列出可用的中文字型：
 
 ```bash
-fc-list :lang=zh family | sort -u        # Linux；macOS 需先 brew install fontconfig
+fc-list :lang=zh family | sort -u        # fc-list 會隨 brew install texlive 一起裝好
 ```
 
 把 `thesis.tex` 的 `\setCJKmainfont` 改成實際存在的字型名。字型名要與系統登記的名稱完全相同（含大小寫與空格）。

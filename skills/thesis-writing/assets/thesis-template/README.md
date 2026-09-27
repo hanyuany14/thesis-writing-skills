@@ -9,10 +9,10 @@ markdown/thesis.md  →  chapters/*.tex  →  thesis.pdf
 
 ## 開始之前
 
-1. **先填 `THESIS-SPEC.md`**——對照貴校論文格式規範逐項核對，改掉與模板不同的設定。模板預設是**政治大學碩士論文**格式，直接沿用很可能被退件。
-2. 在 `thesisvars.tex` 填入系所、題目、姓名、指導教授、口試年月。
-3. 確認環境：需要 `xelatex`、`bibtex`（macOS 裝 MacTeX）、Python 3.9+、`make`。從 Word 匯入才需要 `pandoc`。
-4. 跑一次 `make` 確認能出 PDF，再開始寫內容。
+1. **先確認環境**：macOS 需要 Command Line Tools（`xcode-select --install`）與 TeX Live（`brew install texlive`）。從 Word 匯入才需要 `pandoc`（`brew install pandoc`）。
+2. 跑一次 `make`，確認能出 PDF。
+3. **填 `THESIS-SPEC.md`**：對照貴校論文格式規範逐項核對，改掉與模板不同的設定。模板預設是**政治大學碩士論文**格式，直接沿用很可能被退件。
+4. 在 `thesisvars.tex` 填入系所、題目、姓名、指導教授、口試年月，然後開始寫內容。
 
 ## 日常使用
 
