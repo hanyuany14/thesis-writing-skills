@@ -56,7 +56,8 @@
 | 封面頁碼 | 不編號 |
 | 前置頁頁碼 | 羅馬數字 i, ii, iii |
 | 正文頁碼 | 阿拉伯數字，從 1 重新起算 |
-| 目錄收錄深度 | 到「節」（`tocdepth=2`） |
+| 目錄收錄深度 | 到「小節」（`tocdepth=2`） |
+| 目錄編號格式 | 與內文一致（第一章／第一節／一、） |
 | 標題編號深度 | 到「小節」（`secnumdepth=3`） |
 | 目錄標題字級 | 16pt 粗體置中 |
 
@@ -131,6 +132,8 @@
 | 章編號用「第1章」 | 改成 `{第\arabic{chapter}章}` |
 | 標題字級 | 改 `\fontsize{字級}{行高}`，行高慣例為字級的 1.15～1.5 倍 |
 | 標題與內文間距 | 改 `\titlespacing*` 第四個參數 |
+
+**改了編號文字，目錄要跟著改。** 目錄的編號格式寫在同一個 `\ifzh` 區塊的 `\titlecontents{chapter|section|subsection}`，預設與內文一致。例如節編號改成 `1.1` 時，把 `\titlecontents{section}` 裡的 `第\expandafter\zhTocSecNum\thecontentslabel\relax 節` 改成 `\thecontentslabel`。改完對照目錄頁與內文確認一致。
 
 `\titlespacing*{\chapter}` 上距是負值 `-3em`（把章標題往上拉）。改邊界後章標題位置跑掉，優先調這個。
 

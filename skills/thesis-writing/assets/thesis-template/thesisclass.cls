@@ -289,6 +289,20 @@
     {\arabic{subsubsection}. }{0em}{}
   \titlespacing*{\subsection}{0pt}{0pt}{6pt}
 
+  % 目錄：編號格式與內文一致（第一章／第一節／一、）
+  % toc 裡記的是 1.1、1.1.1，取最後一段轉中文數字
+  \def\zhTocSecNum#1.#2\relax{\naiveZhNum{#2}}
+  \def\zhTocSubsecNum#1.#2.#3\relax{\naiveZhNum{#3}}
+  \titlecontents{chapter}[0em]{}
+    {\makebox[4em][l]{第\naiveZhNum{\thecontentslabel}章}}{}
+    {\cftdotfill{\cftdotsep}\contentspage}
+  \titlecontents{section}[1.5em]{}
+    {\makebox[4em][l]{第\expandafter\zhTocSecNum\thecontentslabel\relax 節}}{}
+    {\cftdotfill{\cftdotsep}\contentspage}
+  \titlecontents{subsection}[3em]{}
+    {\expandafter\zhTocSubsecNum\thecontentslabel\relax 、}{}
+    {\cftdotfill{\cftdotsep}\contentspage}
+
 
   \floatname{algorithm}{演算法}
   \renewcommand{\algorithmicrequire}{\textbf{輸入：}}
