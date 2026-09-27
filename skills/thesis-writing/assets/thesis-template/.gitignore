@@ -1,0 +1,37 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Generated LaTeX chapters
+/chapters/*.tex
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+*-blx.bib
+
+# Generated PDFs and temporary watermark selector
+/thesis.pdf
+/thesis-watermarked.pdf
+/watermark.tex
+
+# 文獻 PDF 有版權且檔案大，不納入版控。references.bib 才是要保存的資產。
+# 需要備份請用雲端硬碟同步 literature/ 資料夾。
+/literature/*.pdf
+
+# 從 Word 匯入的中間檔，內容逐章搬進 markdown/thesis.md 後即可丟棄。
+# 想把匯入結果一併納管的話，刪掉下面兩行。
+/markdown/imported-from-word.md
+/markdown/imported-media/

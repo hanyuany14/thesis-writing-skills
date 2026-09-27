@@ -1,0 +1,5 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# 模板目錄自帶 .gitignore，會處理試跑 make 產生的 LaTeX 中繼檔與 PDF。

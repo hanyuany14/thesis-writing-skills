@@ -1,0 +1,36 @@
+MIT License
+
+Copyright (c) 2026 hanyuan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+以下檔案不適用上述 MIT License：
+
+- skills/thesis-writing/assets/thesis-template/thesisclass.cls
+- skills/thesis-writing/assets/thesis-template/thesisvars.tex
+
+  衍生自 Tz-Huan Huang 的 XeLaTeX 論文模板，採 "THE CHOCOLATE-WARE LICENSE"，
+  原始授權聲明保留在各檔案開頭，請勿移除。
+
+- skills/thesis-writing/assets/thesis-template/pdfs/watermark.pdf
+
+  國立政治大學校徽，著作權屬該校所有，僅供該校學生製作學位論文使用。
+  其他學校的使用者請替換成貴校提供的浮水印檔案。

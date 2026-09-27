@@ -1,0 +1,27 @@
+% 書目資料庫。citation key 的命名慣例是「姓氏 + 年份 + 標題第一個關鍵字」，
+% 全部小寫無空格，例如 bansal2005migrating。
+%
+% 每一筆條目原則上都要有對應的 PDF 放在 literature/<citekey>.pdf，
+% 這樣 AI 才能開啟原文核對你寫的敘述是否與文獻一致。
+% 拿不到 PDF 的文獻（紙本書、付費牆）請加上 note = {NO-PDF: ...} 註記。
+%
+% 下面兩筆是範例，開始寫論文時請刪除。
+
+@article{smith2024example,
+  author  = {Smith, Jane and Chen, Ming},
+  title   = {An Example Article for the Thesis Starter},
+  journal = {Journal of Reproducible Examples},
+  year    = {2024},
+  volume  = {1},
+  number  = {1},
+  pages   = {1--10},
+  doi     = {10.0000/example.2024.001}
+}
+
+@book{chen2023reproducible,
+  author    = {Chen, Wei},
+  title     = {Reproducible Academic Writing},
+  publisher = {Example Press},
+  year      = {2023},
+  note      = {NO-PDF: 範例條目，示範沒有 PDF 時的註記方式}
+}

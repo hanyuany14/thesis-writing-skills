@@ -1,0 +1,104 @@
+% !TEX program = xelatex
+\documentclass[zh]{thesisclass}
+
+\usepackage{verbatim}
+\usepackage{graphicx}
+\graphicspath{{./}{markdown/}}
+\usepackage{pdfpages}
+\usepackage{wallpaper}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\numberwithin{equation}{chapter}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{enumitem}
+
+\usepackage[
+  backend=bibtex,
+  style=authoryear,
+  natbib=true,
+  giveninits=true,
+  maxbibnames=99,
+  maxcitenames=2,
+  uniquename=false,
+  uniquelist=false
+]{biblatex}
+\usepackage[hidelinks]{hyperref}
+\DeclareNameAlias{default}{family-given}
+\DeclareFieldFormat{doi}{\mkbibacro{DOI}\addcolon\space\bibhyperref{\textnormal{\rmfamily #1}}}
+\DeclareFieldFormat{url}{\mkbibacro{URL}\addcolon\space\bibhyperref{\textnormal{\rmfamily #1}}}
+\addbibresource{references.bib}
+
+\setlist[itemize]{itemsep=0pt,topsep=0.6\baselineskip,parsep=0pt,partopsep=0pt}
+\setlist[enumerate]{itemsep=0pt,topsep=0.6\baselineskip,parsep=0pt,partopsep=0pt}
+
+\defaultfontfeatures{Ligatures=TeX}
+\IfFontExistsTF{Times New Roman}
+  {\setmainfont{Times New Roman}}
+  {\setmainfont{TeX Gyre Termes}}
+\setmonofont{lmmono10-regular.otf}
+\IfFontExistsTF{BiauKaiTC}
+  {\setCJKmainfont[AutoFakeBold=true]{BiauKaiTC}}
+  {\IfFontExistsTF{Kaiti TC}
+    {\setCJKmainfont[AutoFakeBold=true]{Kaiti TC}}
+    {\setCJKmainfont[AutoFakeBold=true]{FandolKai-Regular}}}
+
+\input{thesisvars}
+
+\begin{document}
+
+\IfFileExists{watermark.tex}
+  {\input{watermark.tex}}
+  {\input{src/without-watermark.tex}}
+
+\hypersetup{pageanchor=false}
+\frontmatter
+\pagenumbering{gobble}
+\makecover
+\clearpages
+\setcounter{page}{1}
+\hypersetup{pageanchor=true}
+\pagenumbering{roman}
+
+% 口試完成後可取消註解並改用掃描後的審定書 PDF。
+% \includepdf[pages={1}]{pdfs/cert.pdf}
+
+\IfFileExists{chapters/acknowledgements_zh.tex}{
+  \begin{acknowledgementszh}
+  \input{chapters/acknowledgements_zh}
+  \end{acknowledgementszh}
+}{}
+
+\IfFileExists{chapters/abstract_zh.tex}{
+  \begin{abstractzh}
+  \input{chapters/abstract_zh}
+  \end{abstractzh}
+}{}
+
+\IfFileExists{chapters/abstract_en.tex}{
+  \begin{abstracten}
+  \input{chapters/abstract_en}
+  \end{abstracten}
+}{}
+
+\clearpages
+\tableofcontents
+\clearpages
+\listoffigures
+\clearpages
+\listoftables
+
+\mainmatter
+\input{chapters/generated_inputs}
+
+\backmatter
+\clearpages
+\emergencystretch=2em
+\printbibliography[heading=bibintoc,title={參考文獻}]
+
+\end{document}
