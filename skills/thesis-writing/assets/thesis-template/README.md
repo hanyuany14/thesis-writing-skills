@@ -17,7 +17,7 @@ markdown/thesis.md  →  chapters/*.tex  →  thesis.pdf
 ## 日常使用
 
 | 指令 | 用途 |
-|---|---|
+| --- | --- |
 | `make` | 產出 `thesis.pdf` |
 | `make convert` | 只做 Markdown → LaTeX，用來檢查轉換結果 |
 | `make watermarked` | 產出含浮水印版本 |
@@ -28,7 +28,7 @@ markdown/thesis.md  →  chapters/*.tex  →  thesis.pdf
 ## 目錄
 
 | 路徑 | 用途 |
-|---|---|
+| --- | --- |
 | `markdown/thesis.md` | **論文內容，只改這裡** |
 | `THESIS-SPEC.md` | 格式規範對照表，本論文的格式契約 |
 | `references.bib` | 書目資料庫 |
@@ -55,7 +55,7 @@ markdown/thesis.md  →  chapters/*.tex  →  thesis.pdf
 - 編譯失敗 → 先試 `make clean && make`。看 `thesis.log` 裡**第一個** `!` 開頭的錯誤，後面的通常是連鎖反應。
 - 引用變成 `(author?)` → citekey 不在 `references.bib` 裡。
 
-完整說明見 [thesis-writing skill](https://github.com/) 的 `references/` 目錄。
+完整說明見 [thesis-writing skill](https://github.com/hanyuany14/thesis-writing-skills) 的 `skills/thesis-writing/references/` 目錄。
 
 ## 模板來源
 

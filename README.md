@@ -22,7 +22,7 @@
 ## 安裝
 
 ```bash
-git clone https://github.com/<你的帳號>/thesis-writing-skills.git
+git clone https://github.com/hanyuany14/thesis-writing-skills.git
 mkdir -p ~/.claude/skills
 cp -R thesis-writing-skills/skills/thesis-writing ~/.claude/skills/
 ```
@@ -34,7 +34,7 @@ cp -R thesis-writing-skills/skills/thesis-writing ~/.claude/skills/
 ### 需要的環境
 
 | 工具 | 用途 | 安裝 |
-|---|---|---|
+| --- | --- | --- |
 | XeLaTeX + BibTeX | 產生 PDF | macOS 裝 [MacTeX](https://tug.org/mactex/)；Linux `apt install texlive-full` |
 | Python 3.9+ | Markdown → LaTeX 轉換 | 系統通常內建 |
 | make | 建置流程 | macOS 裝 Xcode Command Line Tools |
@@ -111,7 +111,7 @@ $$
 表 1.1 變數操作型定義
 
 | 變數 | 說明 | 平均數 |
-|---|---|---:|
+| --- | --- | ---: |
 | 慣性 | 維持既有使用方式的傾向 | 3.05 |
 ```
 
