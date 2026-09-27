@@ -33,6 +33,7 @@ markdown/thesis.md  →  chapters/*.tex  →  thesis.pdf
 | `THESIS-SPEC.md` | 格式規範對照表，本論文的格式契約 |
 | `references.bib` | 書目資料庫 |
 | `literature/` | 文獻 PDF，檔名 = citation key |
+| `word-source/` | Word 原稿（要匯入的話放這裡） |
 | `images/` | 論文圖片 |
 | `thesisvars.tex` | 封面資料 |
 | `thesisclass.cls` | 排版規則（邊界、行距、章節格式、封面） |
@@ -43,11 +44,15 @@ markdown/thesis.md  →  chapters/*.tex  →  thesis.pdf
 
 ## 從 Word 匯入
 
+已經有 Word 論文稿的話，把 `.docx` 放進 `word-source/`，然後執行：
+
 ```bash
-./scripts/import_docx_to_md.sh /完整路徑/原始論文.docx
+./scripts/import_docx_to_md.sh
 ```
 
-產出 `markdown/imported-from-word.md`，圖片在 `markdown/imported-media/`。**這是待整理的中間檔**，要逐章搬進 `markdown/thesis.md`，並檢查標題階層、公式、表格、圖片路徑與引用格式。原始 Word 檔請留著當核對基準。
+產出 `markdown/imported-from-word.md`，圖片在 `markdown/imported-media/`。
+
+**這是待整理的中間檔，不要直接改名成 `thesis.md`。** 要逐章搬進 `markdown/thesis.md`，並檢查標題階層、公式、表格、圖片路徑與引用格式——Word 方程式多半轉不完整要重打，純文字引用要逐筆換成 `[@citekey]`。原始 Word 檔請留在 `word-source/` 當核對基準。
 
 ## 出問題時
 

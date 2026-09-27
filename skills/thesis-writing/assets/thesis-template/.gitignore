@@ -31,7 +31,11 @@ __pycache__/
 # 需要備份請用雲端硬碟同步 literature/ 資料夾。
 /literature/*.pdf
 
+# Word 原稿是未發表著作，預設不納入版控以免誤推上遠端。
+# 要納管的話刪掉下面這行。
+/word-source/*.docx
+
 # 從 Word 匯入的中間檔，內容逐章搬進 markdown/thesis.md 後即可丟棄。
-# 想把匯入結果一併納管的話，刪掉下面兩行。
 /markdown/imported-from-word.md
+/markdown/imported-from-word.*.md
 /markdown/imported-media/

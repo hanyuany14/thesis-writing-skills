@@ -56,6 +56,12 @@ make          # 先確認環境能出 PDF，再開始寫
 
 AI 會依 skill 的流程：問清楚你的學校系所 → 找出官方格式規範 → 帶你逐項核對 `THESIS-SPEC.md` → 改掉與模板不同的排版設定。**這一步做完再開始寫內容**，可以省下口試前重排全文的痛苦。
 
+**已經有 Word 論文稿的話**，把 `.docx` 放進專案的 `word-source/` 資料夾，然後說：
+
+> 我的 Word 論文稿放在 word-source/ 了，幫我轉進這套流程。
+
+AI 會執行匯入腳本，再逐章帶你整理——公式、表格與引用需要人工修整，一本完整的碩士論文預期要花半天到一天。
+
 設定完成後的日常：
 
 > 幫我寫第二章文獻探討的第一節，文獻我放在 literature/ 了。
@@ -126,6 +132,7 @@ skills/thesis-writing/
 ├── SKILL.md                      # AI 入口：工作流與協作規則
 ├── references/
 │   ├── format-settings.md        # 格式設定清單（現值 + 改法）
+│   ├── import-from-word.md       # 從 Word 論文稿搬進來的完整流程
 │   ├── literature.md             # 文獻管理與引用核對
 │   ├── markdown-syntax.md        # 支援的 Markdown 語法
 │   └── troubleshooting.md        # 疑難排解
@@ -133,6 +140,7 @@ skills/thesis-writing/
     ├── THESIS-SPEC.md            # 格式規範對照表（預填政大現值）
     ├── markdown/thesis.md        # 論文內容，唯一手改的檔案
     ├── literature/               # 文獻 PDF（不進 git）
+    ├── word-source/              # Word 原稿（不進 git）
     ├── references.bib            # 書目資料庫
     ├── thesisclass.cls           # 排版規則
     ├── thesisvars.tex            # 封面資料
